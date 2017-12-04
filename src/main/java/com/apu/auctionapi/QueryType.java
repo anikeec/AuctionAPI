@@ -9,10 +9,10 @@ package com.apu.auctionapi;
  *
  * @author apu
  */
-public class PollQuery extends AuctionQuery {
-
-    public PollQuery(long packetId, int userId) {
-        super(QueryType.POLL, packetId, userId);
-    }    
-    
+public enum QueryType {
+    REGISTRATION,
+    PING,
+    NEW_RATE,
+    NOTIFY,
+    POLL
 }

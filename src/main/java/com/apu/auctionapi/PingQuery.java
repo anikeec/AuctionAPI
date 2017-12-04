@@ -9,10 +9,10 @@ package com.apu.auctionapi;
  *
  * @author apu
  */
-public class PollQuery extends AuctionQuery {
+public class PingQuery extends AuctionQuery {
 
-    public PollQuery(long packetId, int userId) {
-        super(QueryType.POLL, packetId, userId);
+    public PingQuery(long packetId, int userId) {
+        super(QueryType.PING, packetId, userId);
     }    
     
 }

@@ -5,11 +5,27 @@
  */
 package com.apu.auctionapi;
 
+import java.time.LocalTime;
+import java.util.Date;
+
 /**
  *
  * @author apu
  */
 public abstract class AuctionQuery {
-    String time;
+    private QueryType queryType;
+    private String time;
+    private long packetId;
+    private int userId;
+
+    public AuctionQuery(QueryType queryType, long packetId, int userId) {
+        this.queryType = queryType;
+        this.packetId = packetId;
+        this.userId = userId;
+        Date date = new Date();
+        this.time = date.toString();
+    }
+    
+    
     
 }
