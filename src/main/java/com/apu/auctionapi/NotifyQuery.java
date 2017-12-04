@@ -15,8 +15,8 @@ public class NotifyQuery extends AuctionQuery {
     private int lastRateUserId;
 
     public NotifyQuery(int lotId, int price, int lastRateUserId, 
-                        long packetId, int userId) {
-        super(QueryType.NOTIFY, packetId, userId);
+                        long packetId, int userId, String time) {
+        super(QueryType.NOTIFY, packetId, userId, time);
         this.lotId = lotId;
         this.price = price;
         this.lastRateUserId = lastRateUserId;

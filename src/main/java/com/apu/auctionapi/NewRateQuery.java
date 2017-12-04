@@ -10,11 +10,15 @@ package com.apu.auctionapi;
  * @author apu
  */
 public class NewRateQuery extends AuctionQuery {
-    private int lotId;
-    private int price;
+    private Integer lotId;
+    private Integer price;
 
-    public NewRateQuery(int lotId, int price, long packetId, int userId) {
-        super(QueryType.NEW_RATE, packetId, userId);
+    public NewRateQuery(long packetId, int userId, String time) {
+        this(null, null, packetId, userId, time);
+    }
+
+    public NewRateQuery(Integer lotId, Integer price, long packetId, int userId, String time) {
+        super(QueryType.NEW_RATE, packetId, userId, time);
         this.lotId = lotId;
         this.price = price;
     }

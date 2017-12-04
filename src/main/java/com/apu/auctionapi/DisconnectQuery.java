@@ -9,10 +9,10 @@ package com.apu.auctionapi;
  *
  * @author apu
  */
-public class PingQuery extends AuctionQuery {
-
-    public PingQuery(long packetId, int userId, String time) {
-        super(QueryType.PING, packetId, userId, time);
-    }    
+public class DisconnectQuery extends AuctionQuery {
+    
+    public DisconnectQuery(long packetId, int userId, String time) {
+        super(QueryType.DISCONNECT, packetId, userId, time);
+    }
     
 }

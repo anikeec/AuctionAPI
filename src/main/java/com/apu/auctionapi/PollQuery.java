@@ -11,8 +11,8 @@ package com.apu.auctionapi;
  */
 public class PollQuery extends AuctionQuery {
 
-    public PollQuery(long packetId, int userId) {
-        super(QueryType.POLL, packetId, userId);
+    public PollQuery(long packetId, int userId, String time) {
+        super(QueryType.POLL, packetId, userId, time);
     }    
     
 }

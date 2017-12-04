@@ -14,5 +14,7 @@ public enum QueryType {
     PING,
     NEW_RATE,
     NOTIFY,
-    POLL
+    POLL,
+    ANSWER,
+    DISCONNECT
 }

@@ -11,8 +11,8 @@ package com.apu.auctionapi;
  */
 public class RegistrationQuery extends AuctionQuery {
 
-    public RegistrationQuery(long packetId, int userId) {
-        super(QueryType.REGISTRATION, packetId, userId);
+    public RegistrationQuery(long packetId, int userId, String time) {
+        super(QueryType.REGISTRATION, packetId, userId, time);
     }   
     
 }
