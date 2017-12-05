@@ -16,5 +16,6 @@ public enum QueryType {
     NOTIFY,
     POLL,
     ANSWER,
-    DISCONNECT
+    DISCONNECT,
+    POLL_ANSWER
 }
