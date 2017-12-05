@@ -17,5 +17,6 @@ public enum QueryType {
     POLL,
     ANSWER,
     DISCONNECT,
-    POLL_ANSWER
+    POLL_ANSWER,
+    SUBSCRIBE
 }

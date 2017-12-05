@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.apu.auctionapi;
+package com.apu.auctionapi.answer;
 
+import com.apu.auctionapi.AuctionLotEntity;
+import com.apu.auctionapi.QueryType;
+import com.apu.auctionapi.AuctionQuery;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +18,10 @@ import java.util.List;
 public class PollAnswerQuery extends AuctionQuery {
     
     List<AuctionLotEntity> auctionLots = new ArrayList<>();
+    
+    public PollAnswerQuery(long packetId, int userId) {
+        this(packetId, userId, "");
+    }
     
     public PollAnswerQuery(long packetId, int userId, String time) {
         super(QueryType.POLL_ANSWER, packetId, userId, time);

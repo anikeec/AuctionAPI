@@ -5,6 +5,8 @@
  */
 package com.apu.auctionapi;
 
+import com.apu.auctionapi.QueryType;
+
 /**
  *
  * @author apu

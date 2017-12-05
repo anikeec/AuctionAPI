@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.apu.auctionapi;
+package com.apu.auctionapi.answer;
+
+import com.apu.auctionapi.QueryType;
+import com.apu.auctionapi.AuctionQuery;
 
 /**
  *
@@ -12,6 +15,10 @@ package com.apu.auctionapi;
 public class AnswerQuery extends AuctionQuery {
     
     private String message;
+    
+    public AnswerQuery(long packetId, int userId, String message) {
+        this(packetId, userId, "", message);
+    }
     
     public AnswerQuery(long packetId, int userId, String time, String message) {
         super(QueryType.ANSWER, packetId, userId, time);
