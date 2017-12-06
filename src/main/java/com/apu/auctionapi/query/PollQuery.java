@@ -14,6 +14,10 @@ import com.apu.auctionapi.QueryType;
  */
 public class PollQuery extends AuctionQuery {
     
+    public PollQuery(int userId) {
+        this(0, userId, "");
+    }
+    
     public PollQuery(long packetId, int userId) {
         this(packetId, userId, "");
     }

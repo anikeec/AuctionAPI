@@ -14,6 +14,10 @@ import com.apu.auctionapi.QueryType;
  */
 public class RegistrationQuery extends AuctionQuery {
     
+    public RegistrationQuery(int userId) {
+        this(0, userId, "");
+    }
+    
     public RegistrationQuery(long packetId, int userId) {
         this(packetId, userId, "");
     }
