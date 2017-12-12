@@ -7,12 +7,16 @@ package com.apu.auctionapi.query;
 
 import com.apu.auctionapi.AuctionQuery;
 import com.apu.auctionapi.QueryType;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author apu
  */
 public class RegistrationQuery extends AuctionQuery {
+    
+    private final List<Integer> observableLotIdList = new ArrayList<>();
     
     public RegistrationQuery(int userId) {
         this(0, userId, "");
@@ -25,5 +29,18 @@ public class RegistrationQuery extends AuctionQuery {
     public RegistrationQuery(long packetId, int userId, String time) {
         super(QueryType.REGISTRATION, packetId, userId, time);
     }   
+
+    public List<Integer> getObservableLotIdList() {
+        return observableLotIdList;
+    }  
+    
+    public void addLotIdToObservableList(int lotId) {
+        if(!observableLotIdList.contains(lotId))
+            observableLotIdList.add(lotId);
+    }
+    
+    public void addLotIdListToObservableList(List<Integer> lotIdList) {
+        observableLotIdList.addAll(lotIdList);
+    }
     
 }

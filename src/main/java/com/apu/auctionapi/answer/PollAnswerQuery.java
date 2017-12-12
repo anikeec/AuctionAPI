@@ -31,5 +31,9 @@ public class PollAnswerQuery extends AuctionQuery {
         if(!auctionLots.contains(lot))
                 auctionLots.add(lot);
     }
+
+    public List<AuctionLotEntity> getAuctionLots() {
+        return auctionLots;
+    }
     
 }
