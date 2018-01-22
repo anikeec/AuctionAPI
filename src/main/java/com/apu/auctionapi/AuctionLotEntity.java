@@ -16,15 +16,18 @@ public class AuctionLotEntity {
     private int lastRate;
     private int lastRateUserId;
     private int amountObservers;
+    private long timeToFinish;
 
     public AuctionLotEntity(int lotId, int startPrice, String lotName, 
-            int lastRate, int lastRateUserId, int amountObservers) {
+            int lastRate, int lastRateUserId, int amountObservers,
+            long timeToFinish) {
         this.lotId = lotId;
         this.startPrice = startPrice;
         this.lotName = lotName;
         this.lastRate = lastRate;
         this.lastRateUserId = lastRateUserId;
         this.amountObservers = amountObservers;
+        this.timeToFinish = timeToFinish;
     }
 
     public int getLotId() {
@@ -74,5 +77,13 @@ public class AuctionLotEntity {
     public void setAmountObservers(int amountObservers) {
         this.amountObservers = amountObservers;
     }
+
+    public long getTimeToFinish() {
+        return timeToFinish;
+    }
+
+    public void setTimeToFinish(long timeToFinish) {
+        this.timeToFinish = timeToFinish;
+    }    
     
 }
