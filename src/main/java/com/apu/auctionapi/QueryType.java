@@ -20,5 +20,6 @@ public enum QueryType {
     POLL_ANSWER,
     SUBSCRIBE,
     LOAD_LOTS,
-    LOAD_LOTS_ANSWER
+    LOAD_LOTS_ANSWER,
+    INTERNAL_QUERY
 }
