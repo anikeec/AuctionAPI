@@ -5,6 +5,7 @@
  */
 package com.apu.auctionapi.query;
 
+import com.apu.auctionapi.AuctionLotEntity;
 import com.apu.auctionapi.AuctionQuery;
 import com.apu.auctionapi.QueryType;
 
@@ -13,17 +14,23 @@ import com.apu.auctionapi.QueryType;
  * @author apu
  */
 public class NotifyQuery extends AuctionQuery {
-    private int lotId;
-    private int price;
-    private int lastRateUserId;
-
-    public NotifyQuery(int lotId, int price, int lastRateUserId, 
-                        long packetId, int userId, String time) {
-        super(QueryType.NOTIFY, packetId, userId, time);
-        this.lotId = lotId;
-        this.price = price;
-        this.lastRateUserId = lastRateUserId;
+    
+    AuctionLotEntity lot;
+    
+    public NotifyQuery(long packetId, int userId) {
+        this(packetId, userId, "");
     }
     
+    public NotifyQuery(long packetId, int userId, String time) {
+        super(QueryType.NOTIFY, packetId, userId, time);
+    } 
+
+    public AuctionLotEntity getLot() {
+        return lot;
+    }
+
+    public void setLot(AuctionLotEntity lot) {
+        this.lot = lot;
+    }
     
 }
