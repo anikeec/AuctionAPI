@@ -1,0 +1,44 @@
+Client/Server communication
+
+--------------------------------
+RegistrationQuery ->
+		<- AnswerQuery
+
+Client sending this query when it want to connect to server
+--------------------------------
+
+SubscribeQuery ->
+		<- AnswerQuery
+
+Client sending this query when it want to get lot notifications
+--------------------------------
+
+UnsubscribeQuery ->
+		<- AnswerQuery
+
+Client sending this query when it don't want to get lot notifications
+--------------------------------
+
+NewRateQuery ->
+		<- AnswerQuery
+
+Client sending this query when it want to set new rate to lot
+--------------------------------
+
+PingQuery ->
+		<- AnswerQuery
+
+Client periodically sending it to know that server is available
+--------------------------------
+
+DisconnectQuery ->
+		<- AnswerQuery
+
+Client sending this query when it want to disconnect from server
+--------------------------------
+
+		<- NotifyQuery
+AnswerQuery ->
+
+Server sending this query when it want to notify client about any changes in subscribed lots
+--------------------------------
