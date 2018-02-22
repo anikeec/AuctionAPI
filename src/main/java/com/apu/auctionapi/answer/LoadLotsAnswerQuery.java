@@ -34,5 +34,9 @@ public class LoadLotsAnswerQuery extends AuctionQuery {
     public List<Integer> getAuctionLotIdList() {
         return auctionLotIdList;
     }
+
+    public void addAuctionLotIdList(List<Integer> auctionLotIdList) {
+        this.auctionLotIdList.addAll(auctionLotIdList);
+    }    
     
 }
